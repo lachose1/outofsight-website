@@ -4,15 +4,15 @@ var //$ = require("jquery"),
 //Backbone.$ = $;
 var Marionette = require("backbone.marionette");
 
-var outofsight = new Marionette.Application({
+var oos = new Marionette.Application({
     logEvents: function(log) {
         if(log) {
             if(!this.loggingEvents) {
-                outofsight.vent.on("all", this.logEvent);
+                oos.vent.on("all", this.logEvent);
                 this.loggingEvents = true;
             }
         } else {
-            outofsight.vent.off("all", this.logEvent);
+            oos.vent.off("all", this.logEvent);
             this.loggingEvents = false;
         }
     },
@@ -22,10 +22,10 @@ var outofsight = new Marionette.Application({
     }
 });
 
-outofsight.addRegions({
+oos.addRegions({
     mainContainer: "#main-container",
     modalContainer: "#modal-container",
     navbarContainer: "#navbar"
 });
 
-module.exports = outofsight;
+module.exports = oos;

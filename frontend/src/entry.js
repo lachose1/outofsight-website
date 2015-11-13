@@ -20,7 +20,7 @@ OOS.addInitializer(function() {
 // Router initializers
 OOS.addInitializer(function() {
     var oosRouter = new OOSRouter({
-        controller: OOS.oosRouter
+        controller: OOS.oosController
     });
 
     OOS.oosRouter = oosRouter;

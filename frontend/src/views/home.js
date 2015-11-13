@@ -1,6 +1,8 @@
 var _ = require("underscore"),
     Marionette = require("backbone.marionette"),
     OOS = require("../outofsight"),
+    HomeContentView = require("./homeContentView"),
+    RightContentView = require("./rightContentView"),
     template = require("../../dist/templates").home;
 
 var HomeView = Marionette.LayoutView.extend({
@@ -8,7 +10,7 @@ var HomeView = Marionette.LayoutView.extend({
 
     regions: {
         sidebar: "#left-sidebar",
-        famocoPreview: "#famoco-preview"
+        rightContainer: "#right-content"
     },
 
     ui: {
@@ -22,22 +24,13 @@ var HomeView = Marionette.LayoutView.extend({
     initialize: function(options) {
         this.pageType = options.pageType;
 
-        if(options.pageType == "categories") {
-            this.mainView = new CategoriesView({
-                collection: this.collection
-            });
-        }
-        if(options.pageType == "products") {
-            this.mainView = new ProductsView({
-                collection: this.collection,
-                categories: options.categories,
-                category: options.category
-            });
-        }
+        this.mainView = new HomeContentView();
+        this.rightContent = new RightContentView();
     },
 
     onRender: function() {
-        // this.sidebar.show(this.mainView);
+        this.sidebar.show(this.mainView);
+        this.rightContainer.show(this.rightContent);
         // this.famocoPreview.show(new FamocoPreviewView({collection: this.collection, pageType: this.pageType}));
     },
 });
