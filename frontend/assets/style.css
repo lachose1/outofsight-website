@@ -31,8 +31,9 @@ body {
     padding-top: 70px;
     padding-bottom: 20px;
     margin-bottom: 40px;
-    background-color: #f6f6f6;
+    background-color: #000000;
     font-family: Metric, Arial;
+    color: white;
 }
 
 #logo-navbar {
@@ -226,20 +227,12 @@ body {
 
 .navbar-default {
   color: white;
-  background-image: none;
-  background: #f17a27; /* Old browsers */
-  background: -moz-linear-gradient(left, #f17a27 0%, #ebd556 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f17a27), color-stop(100%,#ebd556)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #f17a27 0%,#ebd556 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #f17a27 0%,#ebd556 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #f17a27 0%,#ebd556 100%); /* IE10+ */
-  background: linear-gradient(to right, #f17a27 0%,#ebd556 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f17a27', endColorstr='#ebd556',GradientType=1 ); /* IE6-9 */
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .navbar-default .navbar-brand {
   color: white;
-  border-right: 0.1em solid rgba(255, 255, 255, 0.25);
+  /*border-right: 0.1em solid rgba(255, 255, 255, 0.25);*/
 }
 
 /*
