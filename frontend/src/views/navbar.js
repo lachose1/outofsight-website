@@ -9,12 +9,13 @@ var NavbarView = Marionette.LayoutView.extend({
     template: template,
 
     regions: {
-        //"clockContainer": "#clock-container"
+        "projects": "#projects-navbar"
         // "importCSV": "#btn-menu-importcsv"
     },
 
     events: {        
-        // "click #btn-menu-products": "handleProductsMenuClick",
+        "mouseover #projects-navbar": "handleProductsHover",
+        "mouseout #projects-navbar": "handleProductsOut"
         // "click #btn-menu-importcsv": "handleImportCSVClick",
         // "click #vendor-name": "handleVendorNameClick"
     },
@@ -25,6 +26,23 @@ var NavbarView = Marionette.LayoutView.extend({
 
     onRender: function() {
         //this.clockContainer.show(new ClockView());
+    },
+
+    handleProductsHover: function() {
+        this.showProjectsList();
+    },
+
+    handleProductsOut: function() {
+        this.hideProjectsList();
+    },
+
+    showProjectsList: function() {
+        // $("#projects-list").show();
+        $("#projects-list").css("opacity", 1);
+    },
+
+    hideProjectsList: function() {
+        setTimeout(function() { $("#projects-list").css("opacity", 0); }, 1500);
     }
 });
 

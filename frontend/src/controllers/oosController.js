@@ -39,6 +39,7 @@ var OOSController = Marionette.Controller.extend({
 
         // POSMenu.vent.trigger("menu:FocusCategories", this.model);
         OOS.mainContainer.show(new HomeView({
+            contentType: "home"
         }));
 
         // this.categories.fetch({
@@ -48,6 +49,12 @@ var OOSController = Marionette.Controller.extend({
         //         }
         //     }
         // });
+    },
+
+    showAboutPage: function() {
+        OOS.mainContainer.show(new HomeView({
+            contentType: "about"
+        }));
     }
 });
 

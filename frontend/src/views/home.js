@@ -22,10 +22,18 @@ var HomeView = Marionette.LayoutView.extend({
     },
 
     initialize: function(options) {
-        this.pageType = options.pageType;
+        this.contentType = options.contentType;
 
         this.mainView = new HomeContentView();
-        this.rightContent = new RightContentView();
+        switch(this.contentType){
+            case "home":
+                this.rightContent = new RightContentView();
+                break;
+            case "about":
+                break;
+            default:
+                this.rightContent = new RightContentView();
+        }
     },
 
     onRender: function() {
