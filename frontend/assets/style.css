@@ -78,6 +78,15 @@ body:before {
   display: inline-block;
 }
 
+#projects-list ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#projects-list ul li a:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* centered columns styles */
 .row-centered {
     text-align:center;
