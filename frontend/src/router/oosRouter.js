@@ -3,7 +3,9 @@ var Marionette = require("backbone.marionette");
 var OOSRouter = Marionette.AppRouter.extend({
     appRoutes: {
     	"": "showHomePage",
-    	"about": "showAboutPage"
+    	"about": "showAboutPage",
+    	"contact": "showContactPage",
+    	"projects": "showProjectsPage"
     }
 });
 

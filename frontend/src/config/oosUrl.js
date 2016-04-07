@@ -2,8 +2,8 @@
 // var POSMENU_API_HOST = "52.5.140.246";
 var OOS_API_HOST = window.location.hostname;
 // var POSMENU_API_PORT = "4000";
-var OOS_API_PORT = "3000";
+var OOS_API_PORT = "";
 // var POSMENU_API_ADDRESS = "http://" + POSMENU_API_HOST + ":" + POSMENU_API_PORT + "/";
-var OOS_API_ADDRESS = "http://" + OOS_API_HOST + "/API.php?Action=";
+var OOS_API_ADDRESS = "http://" + OOS_API_HOST + "/oos/";
 
 module.exports = OOSUrl = OOS_API_ADDRESS;
