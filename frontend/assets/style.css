@@ -63,7 +63,7 @@ video#bgvid {
 .btn-project a {
   transition: color 0.5s ease-in-out;
   background: none;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
   border: none;
 }
 
@@ -75,6 +75,11 @@ video#bgvid {
   -webkit-animation: neon2 2s ease-in-out infinite alternate;
   -o-animation: neon2 2s ease-in-out infinite alternate; /* Opera */
   -moz-animation: neon2 2s ease-in-out infinite alternate; /* Firefox */
+}
+
+.btn-project a:active, .btn-project a:visited, .btn-project a:link {
+  background: none;
+  border: none;
 }
 
 #logo-navbar {
