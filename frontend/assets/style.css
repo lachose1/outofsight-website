@@ -27,7 +27,7 @@ body {
     /*background-color: #000000;*/
     font-family: Apercu, Arial;
     color: white;
-    background: url("img/projects/ozone/ozone11.jpg") no-repeat center center fixed; 
+    /*background: url("img/projects/ozone/ozone11.jpg") no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,8 +39,42 @@ body:before {
     position: absolute;
     width: 100%; height:100%;
     top:0; left:0;
-    background:rgba(0, 0, 0, 0.4);
+    background:rgba(0, 0, 0, 0.5);
     opacity: 1;
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    /* background: url("img/projects/ozone/ozone11.jpg") no-repeat; */
+    background-size: cover;
+}
+
+.btn-project a {
+  transition: color 0.5s ease-in-out;
+  background: none;
+  color: rgba(255, 255, 255, 0.3);
+  border: none;
+}
+
+.btn-project a:hover {
+  background: none;
+  color: rgba(255, 255, 255, 1.0);
+  border: none;
+  animation: neon2 2s ease-in-out infinite alternate;
+  -webkit-animation: neon2 2s ease-in-out infinite alternate;
+  -o-animation: neon2 2s ease-in-out infinite alternate; /* Opera */
+  -moz-animation: neon2 2s ease-in-out infinite alternate; /* Firefox */
 }
 
 #logo-navbar {
